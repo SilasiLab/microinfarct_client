@@ -13,7 +13,7 @@ This is the clinet of microinfarcts. You can align the image and label the beads
 ## 2. Preparatory phase
   * 1. For the input raw data, the input folder directory structure should be: `[Your folder containing all the brains]/[brain id](individual brain)/raw/[images_b.jpg]`. Images should all have a postfix `b` (`imageid_b`, e.g.) which indicates color channel blue.
   * 2. You will need a folder to save the result as also. Feel free to create your own folders.
-  * 3. Note that You can absolutely work locally, but you need to copy it to the computational server. You can also work on the cloud drive shared with the server too. Then you need a virtua cloud directory(Google file stream or Rclone).
+  * 3. Note that You can absolutely work locally, but you need to copy the labled result to the computational server afterwards. You can also work on the cloud drive shared with the server too. Then you need a virtua cloud directory(Google file stream or Rclone).
   
 ## 3. User guide
   * 1. `cd [your directory]/microinfarcts/src`
