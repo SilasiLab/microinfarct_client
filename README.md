@@ -1,8 +1,15 @@
 # Microinfarct\_client
 This is the clinet of microinfarcts. You can align the image and label the beads on your own laptop. Select the cloud folders for loading files and saveing files, then all the human labeled result will be uploaded to the cloud drive shared by the computation server.
 ## 1. Install
-* 1. git clone 
-* 2. https://drive.google.com/a/uottawa.ca/file/d/1gWY_0LZDIYWut7o2haSa0zM-XRKGQxO_/view?usp=sharing
+* 1. git clone https://github.com/SilasiLab/microinfarct_client.git
+* 2. get the atlas reference files from google drive share link: https://drive.google.com/a/uottawa.ca/file/d/1gWY_0LZDIYWut7o2haSa0zM-XRKGQxO_/view?usp=sharing
+* 3. unzip it, copy all the contents(individual files rather than the folder) in the folder into the `atlas_refernece` folder.
+* 4. install Anaconda on your computer.
+* 5. `cd microinfarct_client`
+* 6. `conda env create -f req/environment.yml`
+* 7. `cd src`
+* 8. `conda activate microclient`
+* 9. `python main.py`
 ## 2. Preparatory phase
   * 1. For the input raw data, the input folder directory structure should be: `[Your folder containing all the brains]/[brain id](individual brain)/raw/[images_b.jpg]`. Images should all have a postfix `b` (`imageid_b`, e.g.) which indicates color channel blue.
   * 2. You will need a folder to save the result as also. Feel free to create your own folders.
