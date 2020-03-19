@@ -1,4 +1,4 @@
-# Microinfarcts
+# Microinfarct\_client
 * Microinfarcts is a project for loacting the real location of beads inside the brain and use ANTs to align the brain into Allen atlas. 
 After going through the whole process, you will be able to get 
 * 1. A csv file indicating the number of micro infarcts located in different brain regions.
