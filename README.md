@@ -1,34 +1,8 @@
 # Microinfarct\_client
-* Microinfarcts is a project for loacting the real location of beads inside the brain and use ANTs to align the brain into Allen atlas. 
-After going through the whole process, you will be able to get 
-* 1. A csv file indicating the number of micro infarcts located in different brain regions.
-* 2. A opencv window showing the standard atlas, symmerically normalized brain images and the location of the micro infarcts. 
-* ![opencv window](https://github.com/SilasiLab/microinfarcts/blob/master/pics/show.png)
-* You will be able to ajust the transparency using the buttons `q(-)` and `e(+)`, and also position the image using the buttons `a (previous imgae)` and `d (next image)`.
-* The reference atlas comes from Allen Atlas organization. You can find reference data on google drive link attached here:(https://drive.google.com/drive/folders/10MqL8BXkfRsjLgWRuoxJUuZzH9AuWIOe?usp=sharing)
-* After downloading the reference file, you need to copy it into `atlas_reference` folder.
-* So the whole structure of the project should be:
-    * `microinfarcts/src`
-    * `microinfarcts/atlas_reference`
-    * `microinfarcts/atlas_reference/annotation.mhd`
-    * `microinfarcts/atlas_reference/annotation.raw`
-    * `microinfarcts/atlas_reference/atlasVolume.mhd`
-    * `microinfarcts/atlas_reference/atlasVolume.raw`
-
-## 1. Install dependencies
- * 1. `conda install pandas`
- * 2. `conda install -c conda-forge ffmpeg`
- * 3. `conda install -c conda-forge opencv`
- * 4. `conda install matplotlib`
- * 5. `conda install pickle`
- * 6. `conda install tqdm`
- * 7. `conda install scikit-image`
- * 8. `pip install nipype`
- * 9. `conda install pyqt5`
- * 10. `conda install tk`
- * 11. Download and compile ANTs from (https://brianavants.wordpress.com/2012/04/13/updated-ants-compile-instructions-april-12-2012/)
- * 12. `git clone https://github.com/SilasiLab/microinfarcts.git`
-
+This is the clinet of microinfarcts. You can align the image and label the beads on your own laptop. Select the cloud folders for loading files and saveing files, then all the human labeled result will be uploaded to the cloud drive shared by the computation server.
+## 1. Install
+* 1. git clone 
+* 2. https://drive.google.com/a/uottawa.ca/file/d/1gWY_0LZDIYWut7o2haSa0zM-XRKGQxO_/view?usp=sharing
 ## 2. Preparatory phase
   * 1. For the input raw data, the input folder directory structure should be: `[Your folder containing all the brains]/[brain id](individual brain)/raw/[images_b.jpg]`. Images should all have a postfix `b` (`imageid_b`, e.g.) which indicates color channel blue.
   * 2. You will need a folder to save the result as also. Feel free to create your own folders.
