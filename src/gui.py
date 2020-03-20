@@ -17,9 +17,12 @@ class StartWindow(QMainWindow):
     """
     def __init__(self):
         super().__init__()
-        self.root_dir = "/mnt/4T/brain_imgs/"
-        self.save_dir = "/mnt/4T/brain_result/"
-        self.script_dir = "/home/silasi/ANTs/Scripts"
+        # self.root_dir = "/mnt/4T/brain_imgs/"
+        # self.save_dir = "/mnt/4T/brain_result/"
+        # self.script_dir = "/home/silasi/ANTs/Scripts"
+        self.root_dir = os.getcwd()
+        self.save_dir = os.getcwd()
+        self.script_dir = os.getcwd()
 
         self.widget_main = QWidget()
         self.layout_main = QGridLayout()
