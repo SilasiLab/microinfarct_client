@@ -116,6 +116,7 @@ class StartWindow(QMainWindow):
         root = Tk()
         root.withdraw()
         result = askdirectory(initialdir="/", title="Select root directory containing all cage folders")
+        print(result)
         return result
 
     def select_rootDir(self):
