@@ -115,8 +115,9 @@ class StartWindow(QMainWindow):
     def choosePath(self):
         root = Tk()
         root.withdraw()
-        result = askdirectory(initialdir="/", title="Select root directory containing all cage folders")
-        print(result)
+        # result = askdirectory(initialdir="/", title="Select root directory containing all cage folders")
+        # print(result)
+        result = str(QFileDialog.getExistingDirectory(self, "Select Directory"))
         return result
 
     def select_rootDir(self):
