@@ -188,7 +188,6 @@ def locate_beads(img_path_list, output_csv_folder):
     def key(item):
         return float(os.path.basename(item).split(',')[-1].strip().replace('.tif', ''))
     img_path_list.sort(key=key)
-
     for img_path in tqdm(img_path_list):
         animal_id = os.path.basename(img_path).split(',')[0].strip('_')
         z = key(img_path)
