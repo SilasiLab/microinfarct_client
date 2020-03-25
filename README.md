@@ -6,7 +6,9 @@ This is the clinet of microinfarcts. You can align the image and label the beads
 * 3. unzip it, copy all the contents(individual files rather than the folder) in the folder into the `atlas_refernece` folder.
 * 4. install Anaconda on your computer.
 * 5. `cd microinfarct_client`
-* 6. `conda env create -f req/environment.yml`
+* 6. `conda env create -n micro python=3.6.8 Anaconda`
+* 7. `conda activate micro`
+* 8. `conda install opencv=3.4.1`
 * 7. `cd src`
 * 8. `conda activate microclient`
 * 9. `python main.py`
