@@ -221,12 +221,12 @@ def prepare_tissue_image(input_folder, output_folder, color_channel="b", section
                 break
             
             elif key & 0xFF == ord('e'):
-                if affine_dict[pos].ponit2.isInstance():
+                if affine_dict[pos].ponit2.isInstance:
                     affine_dict[pos].ponit2.x = 0
                     affine_dict[pos].ponit2.y = 0
                     status_dict[pos] = status.point2
                     save_line_lock[pos] = 0
-                elif affine_dict[pos].ponit1.isInstance():
+                elif affine_dict[pos].ponit1.isInstance and pos > 0:
                     affine_dict[pos].ponit1.x = 0
                     affine_dict[pos].ponit1.y = 0
                     status_dict[pos] = status.point1
