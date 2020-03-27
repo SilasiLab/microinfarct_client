@@ -128,7 +128,7 @@ def prepare_tissue_image(input_folder, output_folder, color_channel="b", section
     img_paths.sort(key=sort_key)
 
     # raw_images = [cv2.imread(item) for item in img_paths]
-    top, bottom, left, right = 200, 200, 200, 200
+    top, bottom, left, right = 400, 100, 100, 100
     raw_images = [cv2.copyMakeBorder(cv2.imread(item), top, bottom, left, right, cv2.BORDER_CONSTANT, None, (0, 0, 0)) for item in img_paths] 
     stack_length = len(raw_images)
     pos = 0
