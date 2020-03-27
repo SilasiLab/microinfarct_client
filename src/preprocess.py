@@ -148,6 +148,7 @@ def prepare_tissue_image(input_folder, output_folder, color_channel="b", section
                     status.vertical_line: (125, 125, 0),
                     status.critical_line: (0, 125, 125)
                   }
+    save_line_lock = np.zeros((len(raw_images),))
     while(True):
         if pos not in affine_dict.keys():
             affine_dict[pos] = Affine()
@@ -162,7 +163,7 @@ def prepare_tissue_image(input_folder, output_folder, color_channel="b", section
 
         show_image = copy.deepcopy(raw_images[pos])
         show_image = cv2.resize(show_image, (int(show_image.shape[1] * 0.5), int(show_image.shape[0] * 0.5)))
-        save_line_lock = np.zeros((len(raw_images), ))
+
         while (True):
             if vertical_line.isInstance() and affine_dict[pos].isInstance():
                 status_dict[pos] = status.critical_line
@@ -233,6 +234,7 @@ def prepare_tissue_image(input_folder, output_folder, color_channel="b", section
                     save_line_lock[pos] = 0
                 
             elif key & 0xFF == ord('p'):
+                print(save_line_lock.sum())
                 if not affine_dict[pos].isInstance():
                     if not affine_dict[pos].ponit1.isInstance:
                         affine_dict[pos].ponit1.x = x1
