@@ -162,7 +162,7 @@ def prepare_tissue_image(input_folder, output_folder, color_channel="b", section
 
         show_image = copy.deepcopy(raw_images[pos])
         show_image = cv2.resize(show_image, (int(show_image.shape[1] * 0.5), int(show_image.shape[0] * 0.5)))
-
+        save_line_lock = np.zeros((len(raw_images), ))
         while (True):
             if vertical_line.isInstance() and affine_dict[pos].isInstance():
                 status_dict[pos] = status.critical_line
@@ -201,7 +201,10 @@ def prepare_tissue_image(input_folder, output_folder, color_channel="b", section
                         cv2.FONT_HERSHEY_SIMPLEX, 1, color_dict[status.critical_line], 2, cv2.LINE_AA)
             cv2.putText(canvas, "5. Press Q to save all and start to calibrate", (50, 200),
                         cv2.FONT_HERSHEY_SIMPLEX, 1, color_dict[status.critical_line], 2, cv2.LINE_AA)
-            cv2.putText(canvas, "Others: Press A and D to go previous or next", (50, 230),
+            cv2.putText(canvas, "6. Press E to erase current point", (50, 230),
+                        cv2.FONT_HERSHEY_SIMPLEX, 1, color_dict[status.critical_line], 2, cv2.LINE_AA)
+
+            cv2.putText(canvas, "Others: Press A and D to go previous or next", (50, 260),
                         cv2.FONT_HERSHEY_SIMPLEX, 1, color_dict[status.critical_line], 2, cv2.LINE_AA)
             cv2.imshow("Window", canvas)
 
@@ -216,6 +219,19 @@ def prepare_tissue_image(input_folder, output_folder, color_channel="b", section
                 if pos == len(raw_images):
                     pos = 0
                 break
+            
+            elif key & 0xFF == ord('e'):
+                if affine_dict[pos].ponit2.isInstance():
+                    affine_dict[pos].ponit2.x = 0
+                    affine_dict[pos].ponit2.y = 0
+                    status_dict[pos] = status.point2
+                    save_line_lock[pos] = 0
+                elif affine_dict[pos].ponit1.isInstance():
+                    affine_dict[pos].ponit1.x = 0
+                    affine_dict[pos].ponit1.y = 0
+                    status_dict[pos] = status.point1
+                    save_line_lock[pos] = 0
+                
             elif key & 0xFF == ord('p'):
                 if not affine_dict[pos].isInstance():
                     if not affine_dict[pos].ponit1.isInstance:
@@ -232,23 +248,26 @@ def prepare_tissue_image(input_folder, output_folder, color_channel="b", section
                     elif not affine_dict[pos].ponit2.isInstance:
                         affine_dict[pos].ponit2.x = x1
                         affine_dict[pos].ponit2.y = y1
-                        status_dict[pos] = status.vertical_line
-                        if vertical_line.isInstance():
-                            status_dict[pos] = status.critical_line
-
-                elif not vertical_line.isInstance():
-                    vertical_line.point1.x = x1
-                    vertical_line.point1.y = y1
-                    vertical_line.point2.x = x2
-                    vertical_line.point2.y = y2
-                    vertical_line.pos = pos
-                    status_dict[pos] = status.critical_line
-                elif not critical_line.isInstance():
-                    critical_line.point1.x = x1
-                    critical_line.point1.y = y1
-                    critical_line.point2.x = x2
-                    critical_line.point2.y = y2
-                    critical_line.pos = pos
+                        save_line_lock[pos] = 1
+                        if save_line_lock.sum() == len(raw_images):
+                        	status_dict[pos] = status.vertical_line
+                            if vertical_line.isInstance():
+                                status_dict[pos] = status.critical_line
+                
+                elif save_line_lock.sum() == len(raw_images):
+                    if not vertical_line.isInstance():
+                        vertical_line.point1.x = x1
+                        vertical_line.point1.y = y1
+                        vertical_line.point2.x = x2
+                        vertical_line.point2.y = y2
+                        vertical_line.pos = pos
+                        status_dict[pos] = status.critical_line
+                    elif not critical_line.isInstance():
+                        critical_line.point1.x = x1
+                        critical_line.point1.y = y1
+                        critical_line.point2.x = x2
+                        critical_line.point2.y = y2
+                        critical_line.pos = pos
 
                 break
             elif key & 0xFF == ord('q'):
