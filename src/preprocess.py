@@ -242,6 +242,7 @@ def prepare_tissue_image(input_folder, output_folder, color_channel="b", section
                             affine_dict[pos].ponit2.x = 1
                             affine_dict[pos].ponit2.y = 1
                             status_dict[pos] = status.vertical_line
+                            save_line_lock[pos] = 1
                             if vertical_line.isInstance():
                                 status_dict[pos] = status.critical_line
 
@@ -253,7 +254,7 @@ def prepare_tissue_image(input_folder, output_folder, color_channel="b", section
                             status_dict[pos] = status.vertical_line
                             if vertical_line.isInstance():
                                 status_dict[pos] = status.critical_line
-                
+
                 elif save_line_lock.sum() == len(raw_images):
                     if not vertical_line.isInstance():
                         vertical_line.point1.x = x1
