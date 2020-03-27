@@ -20,9 +20,14 @@ class StartWindow(QMainWindow):
         # self.root_dir = "/mnt/4T/brain_imgs/"
         # self.save_dir = "/mnt/4T/brain_result/"
         # self.script_dir = "/home/silasi/ANTs/Scripts"
-        self.root_dir = "/Users/matthewmcdonald/Desktop/brain_input"
-        self.save_dir = "/Users/matthewmcdonald/Desktop/brain_result"
-        self.script_dir = "/Users/matthewmcdonald/Desktop/brain_input"
+        # self.root_dir = "/Users/matthewmcdonald/Desktop/brain_input"
+        # self.save_dir = "/Users/matthewmcdonald/Desktop/brain_result"
+        # self.script_dir = "/Users/matthewmcdonald/Desktop/brain_input"
+
+        self.root_dir = os.getcwd()
+        self.save_dir = os.getcwd()
+        self.script_dir = os.getcwd()
+
 
         self.widget_main = QWidget()
         self.layout_main = QGridLayout()
@@ -113,8 +118,8 @@ class StartWindow(QMainWindow):
                 self.analyseList.addItem(item.text())
 
     def choosePath(self):
-        root = Tk()
-        root.withdraw()
+        # root = Tk()
+        # root.withdraw()
         # result = askdirectory(initialdir="/", title="Select root directory containing all cage folders")
         # print(result)
         result = str(QFileDialog.getExistingDirectory(self, "Select Directory"))
