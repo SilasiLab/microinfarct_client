@@ -16,7 +16,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
+            <state relative-caret-position="90">
               <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
@@ -28,7 +28,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/image_processing_utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="10650">
+            <state relative-caret-position="10515">
               <caret line="710" column="48" selection-start-line="710" selection-start-column="48" selection-end-line="710" selection-end-column="48" />
               <folding>
                 <element signature="e#470#480#0" expanded="true" />
@@ -40,7 +40,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/gui.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1455">
+            <state relative-caret-position="1290">
               <caret line="97" column="54" selection-start-line="97" selection-start-column="54" selection-end-line="97" selection-end-column="54" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
@@ -52,8 +52,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/preprocess.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="120" column="93" selection-start-line="120" selection-start-column="93" selection-end-line="120" selection-end-column="93" />
+            <state relative-caret-position="200">
+              <caret line="127" column="23" lean-forward="true" selection-start-line="127" selection-start-column="23" selection-end-line="127" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -89,8 +89,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="781" />
-    <option name="y" value="364" />
+    <option name="x" value="708" />
+    <option name="y" value="339" />
     <option name="width" value="1078" />
     <option name="height" value="1024" />
   </component>
@@ -100,6 +100,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -121,7 +122,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -294,7 +294,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="781" y="364" width="1078" height="1024" extended-state="0" />
+    <frame x="708" y="459" width="1078" height="1024" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2592242" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -450,7 +451,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
+        <state relative-caret-position="90">
           <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
@@ -460,7 +461,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/image_processing_utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10650">
+        <state relative-caret-position="10515">
           <caret line="710" column="48" selection-start-line="710" selection-start-column="48" selection-end-line="710" selection-end-column="48" />
           <folding>
             <element signature="e#470#480#0" expanded="true" />
@@ -470,7 +471,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/gui.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1455">
+        <state relative-caret-position="1290">
           <caret line="97" column="54" selection-start-line="97" selection-start-column="54" selection-end-line="97" selection-end-column="54" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
@@ -480,8 +481,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/preprocess.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="120" column="93" selection-start-line="120" selection-start-column="93" selection-end-line="120" selection-end-column="93" />
+        <state relative-caret-position="200">
+          <caret line="127" column="23" lean-forward="true" selection-start-line="127" selection-start-column="23" selection-end-line="127" selection-end-column="23" />
         </state>
       </provider>
     </entry>
