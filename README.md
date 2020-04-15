@@ -10,7 +10,7 @@ This is the clinet of microinfarcts. You can align the image and label the beads
 * 7. `conda activate micro`
 * 8. `conda install opencv=3.4.1`
 * 7. `cd src`
-* 8. `conda activate microclient`
+* 8. `conda activate micro`
 * 9. `python main.py`
 ## 2. Preparatory phase
   * 1. For the input raw data, the input folder directory structure should be: `[Your folder containing all the brains]/[brain id](individual brain)/raw/[images_b.jpg]`. Images should all have a postfix `b` (`imageid_b`, e.g.) which indicates color channel blue.
