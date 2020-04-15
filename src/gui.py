@@ -19,8 +19,8 @@ class StartWindow(QMainWindow):
         super().__init__()
         self.root_dir = os.getcwd()
         self.save_dir = os.getcwd()
-        self.script_dir = "/home/silasi/ANTs/Scripts"
-        # self.script_dir = os.getcwd()
+        # self.script_dir = "/home/silasi/ANTs/Scripts"
+        self.script_dir = os.getcwd()
 
         self.widget_main = QWidget()
         self.layout_main = QGridLayout()
